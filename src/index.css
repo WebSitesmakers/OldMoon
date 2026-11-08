@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+/* Micro-Interactions as per Design System */
+.btn-micro {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-micro:hover {
+  transform: scale(1.02);
+}
+
+.btn-micro:active {
+  transform: scale(0.98);
+}
+
+.link-micro {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.link-micro:hover {
+  transform: translateY(-1px);
+}
+
+/* Hide scrollbar for clean tab menus */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
